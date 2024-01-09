@@ -9,15 +9,21 @@
 
 .navbar {
   display: flex;
-  gap: 20px;
+  gap: 80px;
   padding: 15px;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
   background-color: #ff7171;
+  height: 20px;
 }
 
 .navbar a {
+  color: black;
   text-decoration: none;
+  font-family: emoji;
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 25px;
 }
 
 body {
@@ -25,66 +31,92 @@ body {
   color: black;
 }
 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  overflow-x: hidden;
-  padding-top: 20px;
+.first_page,
+.second_page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.left {
-  left: 0;
-  background-color: #fff6ae;
-}
-
-.right {
-  right: 0;
-  background-color: red;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.centered p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-align: left;
-  font-weight: 400;
-  font-size: 17px;
-}
-
-.centeredImg img {
-  position: absolute;
-  top: 0;
-  object-fit: contain;
-}
-
-.heading {
-  width: 500px;
-}
-.centered h1 {
-  font-size: 50px;
+.headingFirstpage {
+  font-size: 3em;
   font-weight: bold;
-  letter-spacing: 6px;
+  letter-spacing: 0.5rem;
+  margin-bottom: 4rem;
 }
 
-.centered button {
-  width: 13rem;
-  height: 50px;
-  background-color: #ff7171;
-  border: none;
+.left_paragraph {
+  width: 50%;
+  padding: 3rem;
+  align-items: center;
+}
+
+.left_paragraph p {
+  line-height: 1.5rem;
+  margin-bottom: 4rem;
+}
+.left_paragraph button {
+  letter-spacing: 0.1cap;
+  padding: 0.6rem 4rem;
   color: white;
-  margin-top: 30px;
+  background-color: rgb(255, 113, 113);
+  border: none;
+}
+.right_image {
+  width: 50%;
+}
+.right_image img {
+  width: 100%;
+  height: 46rem;
 }
 
-@media screen and (max-width: 550px) {
+.left_image img {
+  width: 15rem;
+  height: 13rem;
+}
+.left_image_1 {
+  margin-top: 10rem;
+}
+.left_image_2 img {
+  width: 15rem;
+  height: 26rem;
+  margin-top: 10rem;
+  margin-left: 2rem;
+}
+
+.textSecondPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.8rem;
+  margin-top: 12rem;
+  padding: 1rem;
+  position: relative;
+  background-color: rgb(255, 113, 113);
+}
+.textSecondPage h1 {
+  margin-bottom: 2rem;
+  letter-spacing: 0.5rem;
+  font-size: 2.3rem;
+}
+.textSecondPage h6 {
+  margin: 1rem 0;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.arrow {
+  width: 20px;
+  position: absolute;
+  top: 84%;
+  left: 16%;
+}
+.second_page {
+  padding-bottom: 10rem;
+}
+/* media queries */
+
+@media screen and (max-width: 900px) {
   .navbar a {
     float: none;
     display: block;
